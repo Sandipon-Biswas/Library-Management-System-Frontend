@@ -46,9 +46,11 @@ const Login = () => {
         // success হলে dashboard এ পাঠিয়ে দাও
         alert("login successful")
       } else {
+          alert("error")
         setError(data.error || "Login failed");
       }
     } catch (err) {
+      alert("error")
       setError("Something went wrong");
     }
   };
