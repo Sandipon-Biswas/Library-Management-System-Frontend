@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import MyContext from '../context/myContext';
+import Counter from '../components/Counter';
 
 const Home = () => {
         const {blogs,fetchBlogs}=useContext(MyContext);
@@ -9,6 +10,7 @@ useEffect(() => {
       
   return (
     <>
+    <Counter/>
    <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Empty State */}
       {!Array.isArray(blogs) || blogs.length === 0 ? (
