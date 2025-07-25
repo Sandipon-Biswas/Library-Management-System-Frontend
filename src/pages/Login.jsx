@@ -38,19 +38,22 @@ const Login = () => {
    
 
       if (res.ok) {
+         alert("login successful")
         navigate("/"); 
        const { token, name, role } = data;
         const user = { name, role };
  
         login(token, user); // context এ লগিন করিয়ে দাও
         // success হলে dashboard এ পাঠিয়ে দাও
-        alert("login successful")
+       
       } else {
+     
           alert("error")
         setError(data.error || "Login failed");
       }
     } catch (err) {
-      alert("error")
+      alert(err.message)
+      console.log(error)
       setError("Something went wrong");
     }
   };

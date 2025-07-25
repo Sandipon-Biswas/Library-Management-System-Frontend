@@ -25,7 +25,7 @@ const MyState = ({ children }) => {
     localStorage.setItem('token', token);
     localStorage.setItem('user', JSON.stringify(userInfo));
     setToken(token);
-    setUser(userInfo);
+    //setUser(userInfo);
     toast.success('Login successful!');
   };
 
