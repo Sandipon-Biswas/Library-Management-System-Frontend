@@ -1,5 +1,4 @@
-// ✅ Signup.jsx - রেজিস্ট্রেশন ফর্ম
-// 📁 src/pages/Signup.jsx
+
 import React, { useState, useContext } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -49,24 +48,24 @@ const Signup = () => {
 
   return (
     <Container className="my-4">
-      <h2> সাইন আপ করুন</h2>
+      <h2> Sign Up</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-          <Form.Label>নাম</Form.Label>
+          <Form.Label>Name</Form.Label>
           <Form.Control type="text" value={name} onChange={e => setName(e.target.value)} required />
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label>ইমেইল</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control type="email" value={email} onChange={e => setEmail(e.target.value)} required />
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label>পাসওয়ার্ড</Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} required />
         </Form.Group>
 
-        <Button type="submit" variant="success">সাইন আপ</Button>
+        <Button type="submit" variant="success">Signup</Button>
       </Form>
     </Container>
   );
